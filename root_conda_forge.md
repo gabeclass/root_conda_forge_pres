@@ -1,8 +1,20 @@
 ---
 title: |
   Conda: a complete reproducible ROOT environment in under 5 minutes
-author: Henry Schreiner
-date: \today
+author:
+  - Henry Schreiner\inst{1,2}
+  - Chris Burr\inst{3}
+  - Enrico Guiraud\inst{4}
+shortauthor:
+  - H. Schreiner
+  - C. Burr
+  - E. Guiraud
+institute:
+  - University of Cincinnati\inst{1}
+  - Princeton University\inst{2}
+  - University of Manchester\inst{3}
+  - CERN\inst{4}
+date: March 21, 2019
 fontsize: 10pt
 aspectratio: 169
 ---
