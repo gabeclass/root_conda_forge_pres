@@ -19,8 +19,7 @@
 # *.eps
 # *.pdf
 
-# Put non output files in a subdirectory
-/*.pdf
+root_conda_forge.pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl

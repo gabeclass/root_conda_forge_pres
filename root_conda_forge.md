@@ -132,6 +132,12 @@ Note: macOS compiling requires 10.9 SDK for now - restriction may be lifted in t
     - ROOT became available on day 1 of the new compilers
 * Recipe and patches are at \github{conda-forge/root-feedstock}
 
+\begin{tikzpicture}
+\path [use as bounding box] (0,0) circle (.1);
+\node at (12,1.75) {\includegraphics[width=3cm, trim=100 350 400 310, clip]{drawings.pdf}};
+\end{tikzpicture}
+
+\vspace{-.3cm}
 
 ## Development
 * Many conda-forge formulas improved
@@ -145,12 +151,14 @@ Note: macOS compiling requires 10.9 SDK for now - restriction may be lifted in t
 ::: columns
 ::: column
 
-\vspace{1cm}
+\begin{center}
+\includegraphics[width=3cm, trim=300 490 160 110, clip]{drawings.pdf}
+\end{center}
 
 * Can mix ROOT with TensorFlow or PyTorch on GPU
 * Can run multiple Python versions and ROOT
 
-\vspace{1cm}
+\vspace{.1cm}
 
 Run with:
 
@@ -292,6 +300,13 @@ conda install -y python=3.7 root
 * Recipe at \github{conda-forge/root-feedstock}
 * Join the [ROOT Conda mattermost channel](https://mattermost.web.cern.ch/root/channels/conda)
 * See [Chris Burr's slides](https://indico.cern.ch/event/790021/) for the HSF packaging working group
+
+\begin{tikzpicture}
+\path [use as bounding box] (0,0) circle (.1);
+\node at (12,1.75) {\includegraphics[width=3cm, trim=100 550 380 90, clip]{drawings.pdf}};
+\end{tikzpicture}
+
+\vspace{-.3cm}
 
 
 ##
