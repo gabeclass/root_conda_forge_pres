@@ -129,16 +129,15 @@ Note: macOS compiling requires 10.9 SDK for now - restriction may be lifted in t
 
 * Conda-forge automation: CI builds and bots help with updates
 * Using new uniform compiler stack
-    - ROOT became available on almost day 1 of the new compilers
+    - ROOT became available on day 1 of the new compilers
 * Recipe and patches are at \github{conda-forge/root-feedstock}
 
 
 ## Development
 * Many conda-forge formulas improved
-    * Chris Burr is now an admin
+    * Chris Burr is now part of `staged-recipies`
 * Quite a few patches accepted into ROOT 6.16.00, 6.16.02, and 6.18.00
 * User feedback in hours, fixes in 1-2 days
-* 
 
 
 # Usage examples: Reproducible and shareable environments
@@ -259,11 +258,27 @@ dependencies:
 
 # Other
 
+```yml
+- conda config --add channels conda-forge;
+- conda create -q -n testenv python=${PYVER} root;
+```
+
+::: div
+
 ## CI
 
 * Uproot now tests against ROOT on Travis CI using Conda.
 * Many SciKit-HEP packages now can/are adding support for ROOT in testing.
 * Simple to add to any CI system
+
+:::
+
+```bash
+docker run --rm -it continuumio/miniconda3
+conda config --add channels conda-forge
+conda install -y python=3.7 root
+```
+
 
 ## Docker
 
@@ -289,8 +304,14 @@ The root-feedstock was created by Chris Burr and Henry Schreiner, with assistanc
 * Make root a metapackage (allows a smart user to avoid some modifications using root-base)
 * Make a root-minimal package with a small set of features
     * The package is only 50-100 MB, deps are another 400 MB though
+    * Won't be fully useful until ROOT modules are finished
 * Remove current caveat on macOS 
     * Currently you need to download and prepare the OSX 10.9 SDK
+* Expand official ROOT testing to cover Conda-Forge
+    * Might add nightlies in HEP channel or similar
+* Add more packagas to Conda-Forge for HEP
+    * Already added XRootD, Pythia8, ...
+    * Planned: EvtGen, Geant4, HepMC3, CLHEP, ...
 
 ## Windows
 * Windows will not be supported until ROOT supports 64 bit builds on Windows
@@ -356,7 +377,7 @@ The root-feedstock was created by Chris Burr and Henry Schreiner, with assistanc
     * Reproducible environments
     * Great way to get ML tools, even GPU versions (PyTorch, TensorFlow, …)
     * Even some experiments have been using it: XENON1T, NEXT
-* NLeSC provided a ROOT package for a while – and it became their most downloaded package!
+* NLeSC provided a ROOT package for a while: "the most popular thing we ever produced"
     * ROOT 6.05 and Python 2.7 and 3.4 is latest version
     * Only worked properly on some OS's
     * The focus was on providing IO to get data in/out of ROOT files
@@ -365,7 +386,7 @@ The root-feedstock was created by Chris Burr and Henry Schreiner, with assistanc
 
 * Discussions began at the ROOT users workshop in Sarajevo, 2018
 * Chris Burr built the first Linux ROOT 6.14.06 package for Conda-forge
-    * He now is a Conda-forge admin, and is involved in many packages
+    * He now has merge rights in staged-recipes, and is involved in many packages
 * macOS was added soon after
     * Large number of improvements and fixes based on user feedback
 * Release of 6.16.00 was only a few days after official release
@@ -382,7 +403,7 @@ The root-feedstock was created by Chris Burr and Henry Schreiner, with assistanc
     * C++17 support
     * As many packages separated as ROOT allows (Clang, ...)
 * You can have ROOT, Tensorflow GPU, and Python 3.7 in one environment, and ROOT, PyTorch, and Python 2.7 in another!
-* All Unix OS’s supported
+* Many Unix OS’s supported (CentOS6+, )
 * The ROOT team is working on adding nightly tests for the conda packages (might be available in the HEP channel)
 
 
