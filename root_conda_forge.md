@@ -317,6 +317,12 @@ The root-feedstock was created by Chris Burr and Henry Schreiner, with assistanc
 * Windows will not be supported until ROOT supports 64 bit builds on Windows
 
 
+# Python connections
+
+\centering
+\vspace{-.3cm}
+\includegraphics[width=11cm, clip, trim=60 350 60 70]{python_connections.pdf}
+
 # Conda in 30 seconds
 
 * Language agnostic (Python, R, C++, Julia, …)
