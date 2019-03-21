@@ -26,7 +26,7 @@ titlematter: |
   \node at (0, -.8) [presLight2] {\includegraphics[width=.2\textwidth]{anvil.pdf}};
   \end{tikzpicture}
   \end{center}
-aspectratio: 169
+aspectratio: 1610
 ---
 
 
@@ -149,7 +149,7 @@ Note: macOS compiling requires 10.9 SDK for now - restriction may be lifted in t
 # Usage examples: Reproducible and shareable environments
 
 ::: columns
-::: column
+::: {.column width=60%}
 
 \begin{center}
 \includegraphics[width=3cm, trim=300 490 160 110, clip]{drawings.pdf}
@@ -160,14 +160,14 @@ Note: macOS compiling requires 10.9 SDK for now - restriction may be lifted in t
 
 \vspace{.1cm}
 
-Run with:
+**Run with:**
 
 ```bash
 conda env create -f environment.yml
 ```
 
 :::
-::: column
+::: {.column width=40%}
 
 ```yml
 name: pvfindergpu
